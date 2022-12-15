@@ -1,6 +1,6 @@
 const userWord = document.getElementById("text");
 const btn = document.getElementById("button");
-const result = document.getElementById("result");
+const display = document.getElementById("result");
 
 //Funzione per il buttone
 btn.addEventListener("click", function(){
@@ -22,11 +22,18 @@ btn.addEventListener("click", function(){
     const checkedWord = reverseWord(word);
 
     //Definisco se è palindroma oppure no
-    if ( word !== checkedWord){
-        result.innerText = "Non è Palidroma";
+
+    function itIs (a, b) {
+        let result = a === b ? true : false ; 
+        return result
+    }
+
+
+    if ( itIs(word, checkedWord)){
+        console.log("È Palindroma");
         console.log(word, checkedWord);
     } else {
-        result.innerText = "È Palidroma";
+        console.log("Non è Palindroma");
         console.log(word, checkedWord);
     }
 });
