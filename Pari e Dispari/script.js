@@ -14,7 +14,7 @@ function getRandomNumber (min, max, maxIncluded = true){
     return randomNumber
 }
 
-//Funzione per dichiarare il vincitore
+//Funzione per dichiarare se è pari o no
 function isEven(number){
     return number % 2 === 0; 
 }
@@ -38,7 +38,6 @@ form.addEventListener('submit', function(event) {
     const rightChoice = isEven(sum) ? 'even' : 'odd';
 
     //Individuo il vincitore
-
     const winner = userChoice === rightChoice ? 'User' : 'CPU';
 
     //Stampo
