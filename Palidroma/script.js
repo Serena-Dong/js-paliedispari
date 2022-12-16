@@ -1,9 +1,11 @@
 const userWord = document.getElementById("text");
-const btn = document.getElementById("button");
+const form = document.getElementById("form");
 const display = document.getElementById("result");
 
 //Funzione per il buttone
-btn.addEventListener("click", function(){
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+
 
     //Prendo il valore dall'input
     const word = userWord.value.trim();
@@ -24,16 +26,11 @@ btn.addEventListener("click", function(){
     //Definisco se è palindroma oppure no
 
     function itIs (a, b) {
-        let result = a === b ? true : false ; 
-        return result
+        return result = a === b;
     }
 
+    const check = itIs(word, checkedWord) ? 'È palindroma' : 'Non è palindroma';
 
-    if ( itIs(word, checkedWord)){
-        display.innerHTML='è Palindroma';
-        console.log(word, checkedWord);
-    } else {
-        console.log("Non è Palindroma");
-        console.log(word, checkedWord);
-    }
+    console.log(check);
+
 });
