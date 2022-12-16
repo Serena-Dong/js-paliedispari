@@ -30,7 +30,7 @@ btn.addEventListener("click", function(){
 
 
     if ( itIs(word, checkedWord)){
-        console.log("È Palindroma");
+        display.innerHTML='è Palindroma';
         console.log(word, checkedWord);
     } else {
         console.log("Non è Palindroma");
